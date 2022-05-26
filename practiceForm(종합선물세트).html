@@ -9,77 +9,99 @@
 <body link="black">
   <h1>정보입력</h1>
   <form action="somewhere over the rainover" method="post">
-    <table align="center" style="width: 560;" border="1">
-      <tr><th><input style="width:440px" type="text" placeholder="이름"></th><td>&nbsp;</td></tr>
-      <tr><th><input style="width:440px" type="text" placeholder="아이디"></th><td>&nbsp;</td></tr>
-      <tr><th><input style="width:440px" type="password" placeholder="비밀번호"></th><td align="left" style="font-size: 10px;"><a href="somewhere over the rainBow">비밀번호 도움말</a></td></tr>
-      <tr><th><input style="width:440px" type="password" placeholder="비밀번호 재입력"></th><td>&nbsp;</td></tr>
+    <table align="center" style="width: 560px;" >
+      <tr><td><input style="width:440px" type="text" placeholder="이름"></th><td>&nbsp;</td></tr>
+      <tr><td><input style="width:440px" type="text" placeholder="아이디"></th><td>&nbsp;</td></tr>
+      <tr><td><input style="width:440px" type="password" placeholder="비밀번호"></th><td align="left" style="font-size: 10px;"><a href="somewhere over the rainBow">비밀번호 도움말</a></td></tr>
+      <tr><td><input style="width:440px" type="password" placeholder="비밀번호 재입력"></th><td>&nbsp;</td></tr>
     </table>
       
     <!-- 휴대폰 번호 선택 -->
-    <table align="center" style="width: 500;" border="1">
-      <tr><th style="width: 170;"><select name="휴대폰 번호 선택">
-        <option value="">휴대폰 번호 선택</option>
-        <option value="010">010</option>
-        <option value="018">018</option>
-        </select></th>
-      <th>&nbsp;-&nbsp;</th>
-      <th><input type="number" style="width: 130;"></th>
-      <th>&nbsp;-&nbsp;</th>
-      <th><input type="number" style="width: 130;"></th></tr>
+    <table align="center" style="width: 560px;" >
+      <tr><td style="width: 150px;">
+        <select name="휴대폰 번호 선택">
+          <option value="">휴대폰 번호 선택</option>
+          <option value="010">010</option>
+          <option value="018">018</option>
+        </select></td>
+      <td style="width: 30px;" align="left">-</td>
+      <td style="width: 100px;"><input type="number" style="width: 110px;"></td>
+      <td style="width: 30px;" align="center">-</td>
+      <td><input type="number" style="width: 100px;"></td></tr>
+      <td></td>
     </table>
     
     <!-- 이메일 입력 -->
+    <table align="center" style="width: 560;">
+      <tr><td><input style="width:150px" type="text" placeholder="이메일"></td><td>&nbsp;@&nbsp;</td>
+        <td >
+          <select style="width: 240px;" name="eAddr">
+            <option value="choice">선택</option>
+            <option value="naver.com">naver.com</option>
+            <option value="nate.com">nate.com</option>
+            <option value="gmail.com">gmail.com</option>
+          </select>
+        </td>
+        <td style="width: 120px;"></td>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <!-- 전화번호 -->
+    <table align="center" style="width: 800;" >
+      <tr>
+        <td><select  name="homeNumber" style="width:220px; height:35px; font-size:20px;">
+          <option value="전화번호">전화번호</option>
+          <option value="02">02</option>
+          <option value="031">031</option></select></td>
+        <td>&nbsp;-&nbsp;</td>
+        <td style="width:220px; border: solid; border-width: 1mm; border-color:slategrey;"></td>
+        <td>&nbsp;-&nbsp;</td>
+        <td style="width:220px; border: solid; border-width: 1mm; border-color:slategrey;"></td>
+      </tr>
+    </table>
+<br>
+    <!-- 휴대폰 인증 -->
+    <table align="center" style="width: 800px;">
+      <tr>
+        <td><select  name="homeNumber" style="width:180px; height:35px; font-size:20px;">
+          <option value="휴대폰번호">휴대폰 번호</option>
+          <option value="010">010</option>
+          <option value="018">018</option></select></td>
+        <td>&nbsp;-&nbsp;</td>
+        <td style="width:178px; border: solid; border-width: 1mm; border-color:slategrey;"></td>
+        <td>&nbsp;-&nbsp;</td>
+        <td style="width:175px; border: solid; border-width: 1mm; border-color:slategrey;"></td>
+        <td style="width:120px;"><input type="button" value="휴대폰 인증" style="font-size: 20px;" onclick="location.href='https://www.naver.com/'"></td>
+      </tr>
+    </table>
+    <table align="center" style="width: 800px;">
+      <tr>
+        <td><input type="checkbox" name="인증대표">인증받은 휴대폰 번호를 대표번호로 사용&nbsp;</td>
+        <td><input type="checkbox" name="인증대표">다른 번호 등록&nbsp;</td>
+        <td><input type="checkbox" name="인증대표">다음에 등록함&nbsp;</td>
+        <td style="width: 122px;"></td>
+      </tr>
+    </table>
+    <br>
+    <table align="center" style="width: 800px;">
+      <tr>
+        <td ><input type="text" style="width: 600px; height: 30px;" name="addr" placeholder="우편번호"></td>
+        <td><input type="button" name="주소찾기" value="주소찾기" style="width: 100px; height: 36px;"></td>
+        <td style="width: 100px;"></td>
+      </tr>
+    </table>
+
+    <br>
+    <br>
+    <table align="center" style="width: 500px;">
+      <tr>
+        <td><input type="submit" style="width: 200px; height: 30px; background-color: crimson;" name="acc" value="가입신청"></td>
+        <td style="width: 30px;"></td>
+        <td bgcolor=""><input type="submit" style="width: 200px; height: 30px;" name="acc" value="취소"></td>
+      </tr>
+    </table>
+    <!-- 인증방식 -->
   </form>
-</body>
-</html>
-
-
-      <select name = "휴대폰 번호 선택" style="width: 170px; height: 22px;" >
-        
-    <td>&nbsp-&nbsp</td>
-    <td><input type="text" style="width: 135px;"></td>
-    <td>&nbsp-&nbsp</td>
-    <td><input type="text" style="width: 135px;"></td>
-  </tr>
-  </table>
-
-  <!-- 세번째 테이블 이메일 입력 -->
-  <table>
-    <tr>
-      <td><input type="text" placeholder="이메일" style="width: 162px;" ></td>
-      <td>@</td>
-      <td>
-        <select name="이메일뒷부분" id=""  style="width: 145px;">
-          <option value="">선택</option>
-          <option value="gmail.com">gmail.com</option>
-          <option value="naver.com">naver.com</option>
-        </select>
-      </td>
-    </tr>
-  </table><br><br>
-
-<!-- 네번째 테이블 전화번호 -->
-<table>
-  <tr>
-    <td>
-      <select name="지역번호" id="">
-        <option value="">전화번호</option>
-        <option value="02">02</option>
-        <option value="031">031</option>
-        <option value="032">032</option>
-      </select>
-    </td>
-    <td>-</td>
-    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
-    <td>-</td>
-    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
-  </tr>
-</table>
-
-
-
-
-
 </body>
 </html>
