@@ -6,16 +6,80 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
-<body>
+<body link="black">
   <h1>정보입력</h1>
   <form action="somewhere over the rainover" method="post">
-    <table align="center" border="1" width="400">
-      <tr><th><input size="40" type="text" placeholder="이름"></th><td>&nbsp;</td></tr>
-      <tr><th><input size="40" type="text" placeholder="아이디"></th><td>&nbsp;</td></tr>
-      <tr><th><input size="40" type="password" placeholder="비밀번호"></th><td align="left"><a href="somewhere over the rainBow">비밀번호 도움말</a></td></tr>
-      <tr><th><input size="40" type="password" placeholder="비밀번호 재입력"></th></tr>
-      <tr></tr>
+    <table align="center" style="width: 560;" border="1">
+      <tr><th><input style="width:440px" type="text" placeholder="이름"></th><td>&nbsp;</td></tr>
+      <tr><th><input style="width:440px" type="text" placeholder="아이디"></th><td>&nbsp;</td></tr>
+      <tr><th><input style="width:440px" type="password" placeholder="비밀번호"></th><td align="left" style="font-size: 10px;"><a href="somewhere over the rainBow">비밀번호 도움말</a></td></tr>
+      <tr><th><input style="width:440px" type="password" placeholder="비밀번호 재입력"></th><td>&nbsp;</td></tr>
     </table>
+      
+    <!-- 휴대폰 번호 선택 -->
+    <table align="center" style="width: 500;" border="1">
+      <tr><th style="width: 170;"><select name="휴대폰 번호 선택">
+        <option value="">휴대폰 번호 선택</option>
+        <option value="010">010</option>
+        <option value="018">018</option>
+        </select></th>
+      <th>&nbsp;-&nbsp;</th>
+      <th><input type="number" style="width: 130;"></th>
+      <th>&nbsp;-&nbsp;</th>
+      <th><input type="number" style="width: 130;"></th></tr>
+    </table>
+    
+    <!-- 이메일 입력 -->
   </form>
+</body>
+</html>
+
+
+      <select name = "휴대폰 번호 선택" style="width: 170px; height: 22px;" >
+        
+    <td>&nbsp-&nbsp</td>
+    <td><input type="text" style="width: 135px;"></td>
+    <td>&nbsp-&nbsp</td>
+    <td><input type="text" style="width: 135px;"></td>
+  </tr>
+  </table>
+
+  <!-- 세번째 테이블 이메일 입력 -->
+  <table>
+    <tr>
+      <td><input type="text" placeholder="이메일" style="width: 162px;" ></td>
+      <td>@</td>
+      <td>
+        <select name="이메일뒷부분" id=""  style="width: 145px;">
+          <option value="">선택</option>
+          <option value="gmail.com">gmail.com</option>
+          <option value="naver.com">naver.com</option>
+        </select>
+      </td>
+    </tr>
+  </table><br><br>
+
+<!-- 네번째 테이블 전화번호 -->
+<table>
+  <tr>
+    <td>
+      <select name="지역번호" id="">
+        <option value="">전화번호</option>
+        <option value="02">02</option>
+        <option value="031">031</option>
+        <option value="032">032</option>
+      </select>
+    </td>
+    <td>-</td>
+    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
+    <td>-</td>
+    <td><input type="text"oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"></td>
+  </tr>
+</table>
+
+
+
+
+
 </body>
 </html>
