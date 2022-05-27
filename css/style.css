@@ -2,6 +2,8 @@
 div {
   background-color: aqua;
   /* height: 300px; */
+  /* 문장을 중앙정렬 하는 엘리먼트 생성 */
+  text-align: center;
 }
 
 body {
@@ -29,6 +31,9 @@ p {
 .border{
   border-style: dashed;
   border-style: 1px;
+}
+  {
+  text-align: center;
 }
 
 /* # : id를 지정하여 속성을 바꾸는 방법 */
