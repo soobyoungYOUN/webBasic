@@ -1,0 +1,28 @@
+<!DOCTYPE html> <!-- html 정의 문구, 없어도 잘 돌아감 -->
+<html lang="en"> <!-- 국제화에 필요한데 지금은 없어도 됨 -->
+<head>
+  <meta charset="UTF-8"> <!-- 브라우저에 정보를 전달하는 내용을 담고 있음, 모든 언어를 커버해서 좋음 -->
+  
+  <!-- IE(internetExplorer) 곧 서비스 종료함 / msEdge와 익스플로러의 연동을 위한 것, 크롬과 무관-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+
+  <!-- 기기 사이즈에 따라 컨텐츠를 정의해줌, for 모바일 기기 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- 구글에 검색될 때, 페이지에 가벼운 설명을 달아둘 때 사용 -->
+  <meta name="descripttion" content="비디오 태그 연습">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <video src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+              controls width="500px" muted autoplay></video>
+  </div>
+  <div>
+    <!-- 유튜브 영상 iframe으로 가져오기 -->
+    <iframe src="https://www.youtube.com/embed/4A6oBIu5-B8" frameborder="0" title="손흥민 골 모음">
+
+    </iframe>
+  </div>
+</body>
+</html>
