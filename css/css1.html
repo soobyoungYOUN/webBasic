@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 스타일 파일 가져오기 -->
+  <!-- 겹치는 건 나중에 선언한 거 적용, 안 겹치는 건 적용 -->
+  <!-- 외부선언 방식이 이상적이다 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 스타일 태그 사용방법 -->
+  <style>
+    /* 내부 선언 방식 */
+    div {
+      /* div 태그의 기본 스타일을 설정 */
+      width: 100px;
+      background-color: yellow;
+      font-size: 30px;
+    }
+  </style>
+  <h1>CSS 연습</h1>
+  <!-- 인라인 방식을 쓰지 말자 -->
+  <!-- 스타일 태그를 먼저 읽고 나중에 개별 설정을 따름 -->
+  <div style="background-color: red;">인라인 css</div>
+</body>
+</html>

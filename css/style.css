@@ -1,0 +1,48 @@
+/* 외부에서 스타일을 설정한 파일을 만들고 그 파일을 불러와서 적용 가능 */
+div {
+  background-color: aqua;
+  height: 300px;
+}
+
+body {
+  background-color: hotpink;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+p {
+  color: blue;
+}
+
+/* . : 클래스라는 의미 */
+.red-text {
+  color: red;
+}
+
+.yellow-text{
+  color: yellow;
+}
+
+.big-size{
+  font-size: 50px;
+}
+
+.border{
+  border-style: dashed;
+  border-style: 1px;
+}
+
+/* # : id를 지정하여 속성을 바꾸는 방법 */
+/* id는 유일해서 반복사용이 불가능하니 자주 사용 안하는 방법 */
+#div1{
+  background-color: aquamarine;
+}
+
+/* text-decoration: none => 모든 장식을 제거 */
+a{
+  text-decoration: none;
+  color: grey;
+}
+
+a:hover{
+  color: darkgoldenrod;
+}
