@@ -1,7 +1,7 @@
 /* 외부에서 스타일을 설정한 파일을 만들고 그 파일을 불러와서 적용 가능 */
 div {
   background-color: aqua;
-  height: 300px;
+  /* height: 300px; */
 }
 
 body {
