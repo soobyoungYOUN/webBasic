@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <style> 
+  /* span tag 속성 변환 */
+    span{
+      /* 화면에 꽉 참 */
+      /* 한 행을 전부 차지하기 */
+      display: block;
+      width: 50px;
+      height: 100px;
+    }
+
+    /* div{
+      display: inline;
+    }  */
+
+    div.div1{
+      /* div1 클래스의 스타일을 정의하는 방식 */
+      /* 크기 설정이 가능한 inline-block */
+      margin: 25px; /*영역 내부의 공백*/
+      padding: 25px; /* 영역간의 간격 */
+      position: relative;
+      width: 100px;
+      height: 50px;
+      display: inline-block;
+      background-color: yellow;
+    }
+
+    div.div2{
+      /* absolute : 가장 가까운 position 속성이 아닌 tag 기준 ( tag가 없으면 화면기준의 위치 조정) */
+      /* relative : 원래 위치 기준 위치 조정  */
+      /* fixed : 해당 위치에 고정 */
+      /* sticky : 스크롤을 내리다가 탁탁 걸리는 부분을 만들어 줌(있어보임) */
+      display: inline;
+      position: relative; /* 다른 영역과의 상대적 위치를 조정 */
+
+      
+      /* position: absolute; 절대 위치를 조정(화면 기준) */
+      left: 30px; /* 왼쪽에서 30만큼 */
+      top: 30px; /* 위에서 30만큼 */
+      background-color: pink;
+    }
+    
+  </style>
+
+  <!-- div.div1 => 클래스를 빠르게 사용하는 방법 -->
+   <div class="div1">div1</div> 
+  <!-- .div2 -->
+  <div class="div2">div2</div>
+
+  <div>div</div>
+  <div>div</div>
+
+  <span>span</span>
+  <span>span</span>
+
+  <h1>h1</h1>
+  <h1>h1</h1>
+
+  <!-- div와 같은 역할을 함(아무 속성없는 영역 구분) -->
+  <header>header</header>
+  <footer>footer</footer>
+</body>
+</html>
