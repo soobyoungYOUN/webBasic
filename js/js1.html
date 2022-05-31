@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js"></script>
+</head>
+<body>
+  <button onclick="greeting()">인사</button>
+
+  <script>
+    
+    const NUM = 10; // 상수
+
+    // 변수 설정1
+    // number type
+    var i = 10;
+    i = 20;
+    console.log(i);
+    
+    // 변수 설정2
+    let j = 5;
+    j = 70;
+    console.log(j);
+
+    let name = '윤수병'; //string type
+    let age = 29;
+    let result = name + '는' + age +'살입니다.';
+    result = `${name}는 ${age}살입니다.`
+    console.log(result);
+
+    //자바 for문
+    let items = [1,2,3,4];
+    for (let index = 0; index < items.length; index++) {
+      console.log(items[index]);
+    }
+
+    function myFunc(num) {
+      console.log(num);
+    }
+
+    //Object, Json
+    let person = {
+      name: '윤수병',
+      age: 29
+    }
+
+    console.log(person);
+  </script>
+</body>
+</html>
