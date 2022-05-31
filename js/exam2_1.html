@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="text-align: center;">
+  <style>
+    .center {
+      text-align: center;
+      font-size: x-large;
+    }
+  </style>
+  <script>
+    let txt = prompt("텍스트 값을 입력해 주세요");
+
+    function toGreen() {
+      let $txt = document.getElementById('txt');
+      $txt.style.color = 'green'
+      alert("초록색으로 변경");
+    }
+
+    function toRed() {
+      let $txt = document.getElementById('txt');
+      $txt.style.color = 'red'
+      alert("빨간색으로 변경");
+    }
+    function toBlue() {
+      let $txt = document.getElementById('txt');
+      $txt.style.color = 'blue'
+      alert("파란색으로 변경");
+    }
+  </script>
+
+  <div class="center" id="txt">
+    <script>
+      if (txt.length === 0) {
+        alert('텍스트 값을 입력해주세요');
+      } else {
+        document.write(txt);
+      }  
+    </script>
+    <p></p>
+    <button onclick="toRed()">빨강</button>
+    <button onclick="toGreen()">초록</button>
+    <button onclick="toBlue()">파랑</button>
+  </div>
+</body>
+</html>
