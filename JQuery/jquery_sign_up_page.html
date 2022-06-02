@@ -5,36 +5,122 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
 </head>
 <body link="black">
+  
+  <style>
+    table {
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
   <h1>정보입력</h1>
-  <form action="somewhere over the rainover" method="post">
-    <table align="center" style="width: 560px;" >
-      <tr><td style="width: 70px;">이름</td><td><input style="width:440px" type="text"></th><td>&nbsp;</td></tr>
-      <tr><td>비밀번호</td><td><input style="width:440px" type="password"></th><td>&nbsp;</td></tr>
+  <form>
+    <!-- 개인정보 -->
+    <table>
+      <tr><td id="idid" style="width: 100px;">아이디</td><td><input type="email" style="width:300px" required></td></tr>
+      <tr><td>비밀번호</td><td><input name="passwd" style="width:300px" type="password" required></th></tr>
     </table>
       
     <!-- 성별 -->
-    <table align="center" style="width: 560px;" >
+    <table id="id_gender">
       <tr>
-        <td style="width: 70px;">성별</td>
-        <td></td>
+        <td style="width: 100px;">성별</td>
+        <td style="width: 100px;"><input name="gender" type="radio" value="man">남자</td>
+        <td style="width: 100px;"><input name="gender" type="radio" value="woman">여자</td>
       </tr>
     </table>
-    <br>
     
-    <table align="center" style="width: 500px;">
+    <!-- 직업 -->
+    <table>
       <tr>
-        <td><input type="reset" style="width: 200px; height: 30px;" name="cancel" value="취소"></td>
-        <td style="width: 30px;"></td>
-        <td bgcolor=""><input type="submit" style="width: 200px; height: 30px;" name="acc" value="회원가입"></td>
+        <td style="width: 100px;">직업</td>
+        <td style="width: 200px;"><select name="jobs" style="width: 200px;" name="jobs" id="">
+          <option value=""></option>
+          <option class="job" value="피카츄">피카츄</option>
+          <option class="job" value="파이리">파이리</option>
+          <option class="job" value="꼬부기">꼬부기</option>
+          <option class="job" value="이상해씨">이상해씨</option>
+        </select></td>
+        <td style="width: 100px;"></td>
       </tr>
     </table>
-    <!-- 인증방식 -->
+    
+    <!-- 취미 -->
+    <table id="id_hobby">
+      <tr>
+        <td rowspan="2" style="width: 100px;">취미</td>
+        <td style="width: 100px;"><input name="hobby" type="checkbox">개발</td>
+        <td style="width: 100px;"><input name="hobby" type="checkbox">게임</td>
+        <td style="width: 100px;"><input name="hobby" type="checkbox">낚시</td>
+      </tr>
+      <tr>
+        <td style="width: 100px;"><input name="hobby" type="checkbox">운동</td>
+        <td style="width: 100px;"><input name="hobby" type="checkbox">독서</td>
+        <td style="width: 100px;"><input name="hobby" type="checkbox">음악감상</td>
+      </tr>
+    </table>
+
+    <br>
+    <table>
+      <tr>
+        <th><input id="cancel_button" type="reset" style="width: 100px; height: 30px;" name="cancel" value="취소"></th>
+        <td style="width: 30px;"></td>
+        <th><input id="submit_button" type="submit" style="width: 100px; height: 30px;" name="acc" value="회원가입"></th>
+      </tr>
+    </table>
   </form>
+    <!-- 인증방식 -->
 
   <script>
-    
+    let job1 = 0;
+    let gender1= 0;
+    let hobby1 = 0;
+    let passwd1 = 0;
+
+    $('#submit_button').click(function() {
+    // input tag 중에서 checkbox 타입 중에 name 이 chk 인 것만 고르기
+
+      // 비밀번호
+      if($('input[name=passwd]').val().length<5){
+        alert("최소 비밀번호는 5이상입니다.");
+        return;
+      }else{
+        passwd1++;
+      }
+
+      // 성별
+      if($('input:radio[name=gender]:checked').length<1){
+        alert("성별을 선택하세요.");
+        return;
+      }else{
+        gender1++;
+      }
+
+      // 직업
+      if($("select[name=jobs]").val().length == 0) {
+        alert("직업을 선택하세요.");
+        return;
+      } else {
+        job1++;
+      }
+
+      // 취미
+      if($('input:checkbox[name=hobby]:checked').length < 3) {
+        alert("취미를 세 개 이상 고르시오");
+        return;
+      } else {
+        hobby1++;
+      };
+
+      if (job1 !=0 && gender1 != 0 && hobby1 !=0 && passwd1 != 0){
+        alert("가입되었습니다.");
+      }
+    });
   </script>
 </body>
 </html>
