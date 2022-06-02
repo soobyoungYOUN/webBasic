@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배경 색, 텍스트 색 바꾸기</title>
+</head>
+<body style="text-align: center;">
+  <style>
+    .center {
+      text-align: center;
+      font-size: x-large;
+    }
+
+    button {
+      color: white;
+      background-color: grey;
+      font-size: 200%;
+    }
+  </style>
+
+  <script>
+    function firstWhite() {
+      let x = document.getElementById('html');
+      let y = document.getElementById('css');
+      let z = document.getElementById('javascript');
+      x.style.backgroundColor="white";
+      x.style.color="black";
+      x.style.border="solid";
+      y.style.backgroundColor="gray";
+      y.style.color="white";
+      z.style.backgroundColor="gray";
+      z.style.color="white";
+    }
+    function secondWhite() {
+      let x = document.getElementById('html');
+      let y = document.getElementById('css');
+      let z = document.getElementById('javascript');
+      y.style.backgroundColor="white";
+      y.style.color="black";
+      y.style.border="solid";
+      x.style.backgroundColor="gray";
+      x.style.color="white";
+      z.style.backgroundColor="gray";
+      z.style.color="white";
+    }
+    function thirdWhite() {
+      let x = document.getElementById('html');
+      let y = document.getElementById('css');
+      let z = document.getElementById('javascript');
+      z.style.backgroundColor="white";
+      z.style.color="black";
+      z.style.border="solid";
+      y.style.backgroundColor="gray";
+      y.style.color="white";
+      x.style.backgroundColor="gray";
+      x.style.color="white";
+    }
+
+  </script>
+
+  <div class="center">
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="html" onmouseover="firstWhite('html')">html</button>
+    <button id="css" onmouseover="secondWhite('css')">css</button>
+    <button id="javascript" onmouseover="thirdWhite('javascript')">javascript</button>
+  </div>
+
+</body>
+</html>
