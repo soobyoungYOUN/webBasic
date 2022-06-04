@@ -1,0 +1,76 @@
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 1200px;
+  height: 600px;
+  position: relative;
+}
+
+#score {
+  position: relative;
+} 
+
+#mario {
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+#goomba {
+  width: 100px;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+#killer {
+  position: absolute;
+  width: 100px;
+  left: 220px;
+  bottom: 70px;
+  transform: scaleX(-1);
+  display: none;
+}
+
+#gameover {
+  position: absolute;
+  width: 1900px;
+  height: 600px;
+  background-color: black;
+  line-height: 200px;
+  text-align: center;
+  color: red;
+  font-size: large;
+}
+
+#start {
+  position: absolute;
+  width: 1900px;
+  height: 600px;
+  background-color: black;
+  line-height: 200px;
+  text-align: center;
+  color: white;
+  font-size: large;
+}
+
+.background {
+  position: absolute;
+  background-image: url('../assets/bg.jpg');
+  width: 300%; 
+  height: 100%;
+  animation: slide 3s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    left: 0px;
+  }
+
+  to {
+    left: -107%;
+  }
+}
