@@ -37,13 +37,13 @@ public class Word {
 		return result;
 	}
 
+	// 위의 코드 깔끔하게
 	public boolean isConsonant2(int i){
-		String vowel = "aeiou";
-		boolean result = false;
-		if (!vowel.contains(letters.substring(i, i + 1))) {
-			result = true;
-		}
-		return result;
+		return "aeiou".contains(letters.substring(i, i + 1));
 	}
 
+	// 기존의 모음 구분 메소드를 활용한 자음 구분
+	public boolean isConsonant3(int i){
+		return !isVowel(i);
+	}
 }
