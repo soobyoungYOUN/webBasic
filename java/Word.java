@@ -27,4 +27,23 @@ public class Word {
 		return result;
 	}
 
+	// i 번째 글자가 자음인지
+	public boolean isConsonant(int i){
+		String vowel = "aeiou";
+		boolean result = false;
+		if (!vowel.contains(letters.substring(i, i + 1))) {
+			result = true;
+		}
+		return result;
+	}
+
+	public boolean isConsonant2(int i){
+		String vowel = "aeiou";
+		boolean result = false;
+		if (!vowel.contains(letters.substring(i, i + 1))) {
+			result = true;
+		}
+		return result;
+	}
+
 }
