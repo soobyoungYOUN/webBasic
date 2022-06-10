@@ -15,10 +15,13 @@
         // GET 방식
         // $('#demo').load('ajax_info.txt');
         
+        // JSON 파일을 불러온 후 다음 명령을 실행
         $.getJSON('people.json', function (json) {
           console.log(json);
-          $('demo').html(JSON.stringify(json));
-          $('demo').html(`${json.name} : {json.skill}`);
+          // json 파일의 내용을 텍스트로 변환하여 div에 입력
+          $('#demo').html(JSON.stringify(json)); 
+          // json 파일의 내용 중 이름과 스킬만 출력하여 입력
+          $('#demo').html(`${json.name} : ${json.skill}`);
         });
       });
     });

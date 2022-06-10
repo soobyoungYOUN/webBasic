@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  <script src="https://code.jquery.com/jquery-3.6.0.js" 
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
     crossorigin="anonymous"></script>
 
   <style>
@@ -45,12 +46,14 @@
           // for (let i = 0; i < jsonArray.length; i++)
           let $list = $('#list');
           jsonArray.forEach((data, i) => {
+
+            // 위의 링크에서 받아온 정보, 리스트의 원소를 하나씩 받아서 'card'클래스 div를 추가하며 입력
             $list.append(`<div class="card" onclick="moveCommentsPage(${data.id})">
-      <div class="container">
-        <h4><b>${data.title}</b></h4>
-        <p>${data.body}</p>
-      </div>
-    </div>`);
+                <div class="container">
+                  <h4><b>${data.title}</b></h4> 
+                  <p>${data.body}</p> 
+                </div>
+              </div>`);
           })
           console.log(jsonArray);
         });
